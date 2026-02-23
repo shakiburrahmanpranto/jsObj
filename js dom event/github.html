@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document secret gihub</title>
+  </head>
+  <body>
+    <h1 id="secret_info">My secret info</h1>
+    <input id="confirm_delete" type="text" placeholder="please type delete" />
+    <button id="btn_delete" disabled>Delete</button>
+    <script>
+      document
+        .getElementById("confirm_delete")
+        .addEventListener("keyup", function (event) {
+          const text = event.target.value;
+          const deleteButton = document.getElementById("btn_delete");
+          if (text === "delete") {
+            deleteButton.removeAttribute("disabled");
+          } else {
+            deleteButton.setAttribute("disabled", true);
+          }
+        });
+      document
+        .getElementById("btn_delete")
+        .addEventListener("click", function () {
+          const secretInfo = document.getElementById("secret_info");
+          secretInfo.style.display = "none";
+        });
+    </script>
+  </body>
+</html>

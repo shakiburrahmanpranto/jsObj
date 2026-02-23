@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button id="make_blue">Make blue</button>
+    <button id="make_green">Make green</button>
+    <button id="make_goldenrod">Make orange</button>
+    <script src="adEvent.js"></script>
+    <script>
+      document
+        .getElementById("make_goldenrod")
+        .addEventListener("click", function () {
+          document.body.style.backgroundColor = "goldenrod";
+        });
+    </script>
+  </body>
+</html>

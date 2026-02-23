@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="input_text_display">Input text</p>
+    <input id="input_field" type="text" />
+    <button id="btn_update">Update button</button>
+
+    <script>
+      document
+        .getElementById("btn_update")
+        .addEventListener("click", function () {
+          const inputField = document.getElementById("input_field");
+          const inputText = inputField.value;
+
+          const p = document.getElementById("input_text_display");
+          p.innerText = inputText;
+          inputField.value = " ";
+        });
+    </script>
+  </body>
+</html>
